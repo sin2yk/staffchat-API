@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StaffChat / スタッフチャット</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="min-h-screen bg-slate-50 text-slate-900">
+    <!-- ヘッダー（明るめ、社内ツール感） -->
+    <header class="border-b border-slate-200 bg-white/90 backdrop-blur">
+      <div
+        class="mx-auto max-w-5xl px-4 py-3 flex items-center justify-between"
+      >
+        <h1 class="text-lg font-bold text-sky-800 shadow-md">
+          StaffChat
+          <span class="text-sm text-slate-800">/ スタッフチャット</span>
+        </h1>
+        <div class="text-s text-slate-500 flex items-center gap-2">
+          <span id="currentUserLabel">Not signed in</span>
+          <button
+            id="signInBtn"
+            class="px-2 py-1 border rounded text-[12px] hover:bg-slate-500"
+          >
+            ログイン
+          </button>
+          <button
+            id="signOutBtn"
+            class="px-2 py-1 border rounded text-[12px] hover:bg-slate-500 hidden"
+          >
+            ログアウト
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- メインコンテナ -->
+    <main id="app" class="mx-auto max-w-5xl px-4 py-6 space-y-4"></main>
+
+    <!-- jQuery CDN（自前のJSより先に読み込む） -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- アプリ本体（ES Modules） -->
+    <script type="module" src="./js/app.js"></script>
+
+    <!-- googlemap API -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&libraries=places"
+      defer
+    ></script>
+  </body>
+</html>
